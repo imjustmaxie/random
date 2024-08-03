@@ -4,3 +4,4 @@ var objc = {
     "asnpSpecVersion" : "2.0"
   }
 };
+$done({ body: JSON.stringify(objc) });
