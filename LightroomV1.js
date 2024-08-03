@@ -60,54 +60,6 @@ a.appProfile.accessibleItems[0]["fulfillable_items"] = {
           }
       }
 
-/*
-a.appProfile.accessibleItems["fulfillable_items"] = {
-          "cc_storage": {
-            "enabled": true,
-            "feature_sets": {
-              "CS_LVL_2": {
-                "id": "CS_LVL_2",
-                "label": "CS LVL 2",
-                "enabled": true
-              },
-              "VRT_30": {
-                "id": "VRT_30",
-                "label": "VRT 30",
-                "enabled": true
-              }
-            },
-            "charging_model": {
-              "cap": 100,
-              "unit": "GB",
-              "model": "RECURRING",
-              "overage": "NA"
-            }
-          },
-          "lightroom_mobile_app": {
-            "enabled": true,
-            "charging_model": {
-              "model": "RECURRING",
-              "overage": "NA",
-              "rollover": 0
-            }
-          },
-          "core_services_cc": {
-            "enabled": true,
-            "feature_sets": {
-              "CS_LVL_2": {
-                "id": "CS_LVL_2",
-                "label": "CS LVL 2",
-                "enabled": true
-              }
-            },
-            "charging_model": {
-              "model": "RECURRING",
-              "overage": "NA",
-              "rollover": 0
-            }
-          }
-      };
-*/
 a.appProfile.appUsageTrackingControl = { enabledTracking: false };
 
 a.controlProfile.creationTimeStamp = 1722658065167;
