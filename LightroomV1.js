@@ -14,6 +14,7 @@ a.appProfile.accessibleItems.source.type = "TEMPORARY_ENTITLEMENT";
 a.appProfile.accessibleItems.source["status_reason"] = "NORMAL";
 a.appProfile.accessibleItems.source["can_access_until"] = 0;
 
+/*
 a.appProfile.accessibleItems["fulfillable_items"] = {
           "cc_storage": {
             "enabled": true,
@@ -60,7 +61,7 @@ a.appProfile.accessibleItems["fulfillable_items"] = {
             }
           }
       };
-
+*/
 a.appProfile.appUsageTrackingControl = { enabledTracking: false };
 
 a.controlProfile.creationTimeStamp = 1722658065167;
