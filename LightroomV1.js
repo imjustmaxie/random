@@ -9,10 +9,64 @@ a.profileStatus = "PROFILE_AVAILABLE";
 a.profileStatusReason = 1001;
 a.profileStatusReasonText = "Profile Available due to a temporary entitlement created to hide provisioning delays (HADES)";
 
-//a.appProfile.accessibleItems.source.id = "TEMP_LICENSE_PROD";
-//a.appProfile.accessibleItems.source.type = "TEMPORARY_ENTITLEMENT";
-//a.appProfile.accessibleItems.source["status_reason"] = "NORMAL";
-//a.appProfile.accessibleItems.source["can_access_until"] = 0;
+a.appProfile.accessibleItems = [
+  {
+    "source" : {
+      "id" : "TEMP_LICENSE_PROD",
+      "type" : "TEMPORARY_ENTITLEMENT",
+      "status_reason" : "NORMAL",
+      "can_access_until" : 0
+    }
+  },
+{
+          "fulfillable_items" : {
+          "cc_storage": {
+            "enabled": true,
+            "feature_sets": {
+              "CS_LVL_2": {
+                "id": "CS_LVL_2",
+                "label": "CS LVL 2",
+                "enabled": true
+              },
+              "VRT_30": {
+                "id": "VRT_30",
+                "label": "VRT 30",
+                "enabled": true
+              }
+            },
+            "charging_model": {
+              "cap": 100,
+              "unit": "GB",
+              "model": "RECURRING",
+              "overage": "NA"
+            }
+          },
+          "lightroom_mobile_app": {
+            "enabled": true,
+            "charging_model": {
+              "model": "RECURRING",
+              "overage": "NA",
+              "rollover": 0
+            }
+          },
+          "core_services_cc": {
+            "enabled": true,
+            "feature_sets": {
+              "CS_LVL_2": {
+                "id": "CS_LVL_2",
+                "label": "CS LVL 2",
+                "enabled": true
+              }
+            },
+            "charging_model": {
+              "model": "RECURRING",
+              "overage": "NA",
+              "rollover": 0
+            }
+          }
+      }
+}
+]
 
 /*
 a.appProfile.accessibleItems["fulfillable_items"] = {
