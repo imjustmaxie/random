@@ -9,10 +9,10 @@ a.profileStatus = "PROFILE_AVAILABLE";
 a.profileStatusReason = 1001;
 a.profileStatusReasonText = "Profile Available due to a temporary entitlement created to hide provisioning delays (HADES)";
 
-a.appProfile.accessibleItems.source.id = "TEMP_LICENSE_PROD";
-a.appProfile.accessibleItems.source.type = "TEMPORARY_ENTITLEMENT";
-a.appProfile.accessibleItems.source["status_reason"] = "NORMAL";
-a.appProfile.accessibleItems.source["can_access_until"] = 0;
+//a.appProfile.accessibleItems.source.id = "TEMP_LICENSE_PROD";
+//a.appProfile.accessibleItems.source.type = "TEMPORARY_ENTITLEMENT";
+//a.appProfile.accessibleItems.source["status_reason"] = "NORMAL";
+//a.appProfile.accessibleItems.source["can_access_until"] = 0;
 
 /*
 a.appProfile.accessibleItems["fulfillable_items"] = {
