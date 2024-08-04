@@ -22,7 +22,7 @@ a.profileStatusReason = 1000;
 a.profileStatusReasonText = "Profile Available due to an acquired plan provisioned and ACTIVE";
 
 //a.appProfile.accessibleItems[0].source.id = "TEMP_LICENSE_PROD";
-a.appProfile.appId = "PSXIOS1";
+//a.appProfile.appId = "PSXIOS1";
 a.appProfile.accessibleItems[0].source["type"] = "LICENSE";
 a.appProfile.accessibleItems[0].source["status_reason"] = "NORMAL";
 a.appProfile.accessibleItems[0].source["can_access_until"] = 4102395009000; // 12/31/2099 06:10:09 PM
@@ -82,11 +82,8 @@ a.appProfile.accessibleItems[0]["fulfillable_items"] = {
           }
       };
 
-//a.appProfile.accessibleItems[1] = a.appProfile.accessibleItems[0]
-
-//a.controlProfile.creationTimeStamp = 1722658065167;
-a.controlProfile.nglAppId = "PSXIOS1";
-a.controlProfile.requesterNglAppId = "PSXIOS1";
+//a.controlProfile.nglAppId = "PSXIOS1";
+//a.controlProfile.requesterNglAppId = "PSXIOS1";
 a.controlProfile.cacheLifetime = 39970872755;
 a.controlProfile.validUptoTimestamp = 4102395009000;
 a.controlProfile.cacheRefreshControl = { appRefreshInterval: 87840000, nglLibRefreshInterval: 87840000 };
