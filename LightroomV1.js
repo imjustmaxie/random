@@ -80,7 +80,6 @@ a.appProfile.accessibleItems[0]["fulfillable_items"] = {
           }
       };
 
-a.controlProfile.cacheLifetime = 39970872755;
 a.controlProfile.validUptoTimestamp = 4102395009000;
 a.controlProfile.cacheRefreshControl = { appRefreshInterval: 87840000, nglLibRefreshInterval: 87840000 };
 a.controlProfile.overrideStatusForLocalSignout = "PROFILE_DENIED";
