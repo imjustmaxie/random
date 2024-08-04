@@ -1,9 +1,9 @@
 /*
 
-Hostname: firefly-ae.adobe.io
+Hostname: firefly*.adobe.io
 
 Script Type: Response
-Matching URL: https://firefly-ae.adobe.io/v1/credits/balance
+Matching URL: https:\/\/firefly(.*).adobe.io\/v1\/credits\/balance
 
 Body Required: True
 Update Interval: 5
