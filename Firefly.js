@@ -17,7 +17,7 @@ body.credits["firefly_free_credit"].quota.available = 999;
 body.credits["firefly_free_credit"].quota.total = 999;
 body.credits["firefly_free_credit"].quota.used = 0;
 
-//body.total.availableUntil = "2099-12-31T23:59:59.000Z";
+body.total.availableUntil = "2100-01-01T00:00:00.000Z";
 body.total.quota.available = 999;
 body.total.quota.total = 999;
 body.total.quota.used = 0;
