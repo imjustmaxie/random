@@ -19,8 +19,8 @@ const appDetails = {
     'Construction': { bundleId: 'com.calculated.laurene', productId: 'cmp_one_year_1' },
     'DMV': { bundleId: 'com.dmvpermit.testapp', productId: '32111' },
     'OutPlayer': { bundleId: 'com.stps.outplayer.advanced', productId: 'com.stps.outplayer' },
-    'One%20Sec': { bundleId: 'wtf.riedel.one-sec', productId: 'wtf.riedel.one_sec.pro.annual.individual' },
-    'Moovit' : { bid : 'com.tranzmate.tranzmate1', pid: 'com.moovit.iap.moovit_plus_12M_PT3' }
+    'One%20Sec': { bundleId: 'wtf.riedel.one-sec', productId: 'wtf.riedel.one_sec.pro.annual.individual' }
+
 };
 
 let response = {
@@ -86,7 +86,7 @@ let response = {
             "original_purchase_date": "2024-02-11 09:09:10 Etc/GMT"
         }
     ],
-    "latest_receipt": "blatant_zzz",
+    "latest_receipt": "ijm",
     "environment": "Production",
     "pending_renewal_info": [
         {
