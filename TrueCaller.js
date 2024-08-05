@@ -47,4 +47,5 @@ switch ($request.url) {
     magik.data["is_premium"] = true;
     break;
 }
-$done(body : {JSON.stringify(magik)});
+let body = JSON.stringify(magik);
+$done({body});
