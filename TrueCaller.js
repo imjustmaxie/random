@@ -14,8 +14,8 @@ let body = $response.body;
 body = JSON.parse(body);
 
 body.expire = "2100-01-01T00:00:00Z";
-body.isExpired = "false";
-body.isGracePeriodExpired = "false";
+body.isExpired = false;
+body.isGracePeriodExpired = false;
 body.tier.id = "gold";
 body.tier["feature"] = [
                 {
