@@ -33,7 +33,6 @@ const features = [
             ];
 
 var magik;
-
 switch ($request.url) {
   case findURL(/subscriptions\/status/):
     magik = JSON.parse($response.body);
@@ -47,5 +46,6 @@ switch ($request.url) {
     magik.data["is_premium"] = true;
     break;
 }
+
 let body = JSON.stringify(magik);
 $done({body});
