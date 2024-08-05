@@ -3,7 +3,7 @@
 Hostname: premium*.truecaller.com
 
 Script Type: Response
-Matching URL: https:\/\/premium(.*).truecaller.com\/v(.*) or ^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|monetization\/component)?
+Matching URL: ^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|monetization\/component)?
 
 Body Required: True
 Update Interval: 5
