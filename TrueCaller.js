@@ -11,7 +11,7 @@ Update Interval: 5
  */
 
 function findURL(regexURL) {
-  if regexURL.test($request.url) {
+  if (regexURL.test($request.url)) {
     return $request.url;
   }
 };
