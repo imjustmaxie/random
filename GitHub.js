@@ -6,7 +6,7 @@ Matching URL: https://api.github.com/graphql
 */
 
 let objet = $response.body;
-objet = JSON.parse(objet)
+objet = JSON.parse(objet);
 if typeof (objet.data.viewerHasTradeRestrictions) !== "undefined" {
   }
 else {
