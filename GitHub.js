@@ -13,9 +13,9 @@ if hdr.operationName != "Authorizations" {
 else {
   let objet = $response.body;
   objet = JSON.parse(objet);
-  objet.data.isProPlan = true;
-  objet.data.hasAppleIapSubscription = true;
-  objet.data.isEmployee = true;
+  objet.data.viewer.isProPlan = true;
+  objet.data.viewer.hasAppleIapSubscription = true;
+  objet.data.viewer.isEmployee = true;
   let b = JSON.stringify(objet);
   $done({b});
 }
