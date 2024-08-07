@@ -8,10 +8,8 @@ let objet = $response.body;
 
 objet = JSON.parse(objet);
 objet.license = "premium";
-objet["supports_hifi"] = {
-  "fully_supported" : true,
-  "user_eligible" : true,
-  "device_supported" : true
-}
+objet.supports_hifi.fully_supported = true;
+objet.supports_hifi.user_eligible = true;
+objet.supports_hifi.device_supported = true;
 let body = JSON.stringify(objet);
 $done({body});
