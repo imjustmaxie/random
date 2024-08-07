@@ -1,8 +1,7 @@
 /*
 
 Hostname : gae*.spclient.spotify.com
-Matching URL : ^https:\/\/gae(.+)\.spclient\.spotify\.com\/device-capabilities\/v\d\/capabilities?
-
+Matching URL : ^https:\/\/gae(.+)\.com\/device-capabilities\/v\d\/capabilities(.+)
 */
 
 let objet = $response.body;
