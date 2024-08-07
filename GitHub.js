@@ -6,7 +6,7 @@ Matching URL: https://api.github.com/graphql
 */
 
 let hdr = $request.headers
-if hdr != "Authorizations" {
+if hdr["x-apollo-operation-name"] != "Authorizations" {
   $done({$response.body});
 }
 else {
