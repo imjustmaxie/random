@@ -13,5 +13,5 @@ objet["supports_hifi"] = {
   "user_eligible" : true,
   "device_supported" : true
 }
-
-$end({JSON.stringify(objet)});
+let body = JSON.stringify(objet);
+$end({body});
