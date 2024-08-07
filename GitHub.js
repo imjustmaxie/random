@@ -5,15 +5,16 @@ Matching URL: https://api.github.com/graphql
 
 */
 
-let objet = $response.body;
-objet = JSON.parse(objet);
-if typeof (objet.data.viewerHasTradeRestrictions) !== "undefined" {
-  }
-else {
-  objet.data.viewer.isProPlan = true;
-  objet.data.viewer.hasAppleIapSubscription = true;
-  objet.data.viewer.isEmployee = true;
+let obj = JSON.parse($response.body);
+if (obj.data && obj.data.viewer) {
+  obj.data.viewer.isProPlan = true;
+  obj.data.viewer.isEmployee = true;
+  obj.data.viewer.hasAppleIapSubscription = true;
+
+  $done({
+    body: JSON.stringify(obj)
+  });
+} else {
+  $done({});
 }
-let b = JSON.stringify(objet);
-$done({b});
 
