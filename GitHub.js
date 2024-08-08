@@ -5,8 +5,8 @@ Matching URL: https://api.github.com/graphql
 
 */
 
-let hdr = JSON.parse($response.headers);
-if (hdr["x-apollo-operation-name"] == "Authorizations")
+let hdr = JSON.parse($response.body);
+if (hdr["operationName"] == "Authorizations")
 {
   let objet = JSON.parse($response.body);
   // if (typeof(objet.data.viewerHasTradeRestrictions)!== "undefined") 
