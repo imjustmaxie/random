@@ -14,22 +14,6 @@ const UA = $request.headers["User-Agent"] || $request.headers["user-agent"] ;
 
 let receiptIDGen = Math.floor(Math.random() * 0x07151129)
 
-let params = {
-    now : "1694273635000",
-    nowDate : "2024-02-11 16:06:27 Etc/GMT",
-    nowDatePST: "2024-02-11 06:06:27 America/Los_Angeles",
-    receiptID : receiptIDGen,
-    exp : "4092599349000",
-    expDate : "2099-09-09 13:37:37 Etc/GMT",
-    expDatePST : "2099-09-09 06:06:06 America/Los_Angeles",
-    sampleBundleID : "com.floatcamellia.hfrslowmotion",
-    sampleProductID : "com.floatcamellia.hfrslowmotion.yearly",
-    sampleTransactionID : "440001731320417",
-    sampleTransactionID2 : "490001314520000",
-    sampleItemID : 1247478067,
-    sampleDownloadID : 503226333846907953,
-}
-
 const appDetails = {
     'TimeCut': { bundleId: 'com.floatcamellia.timecut', productId: 'com.wifimap.pro.version.yearly.premium' },
     'WaterMinder': { bundleId: 'com.waterminder.waterminder', productId: 'waterminder.premiumOnetime' },
@@ -54,60 +38,79 @@ const appDetails = {
 }
 
 let receiptInfo = {
-    "quantity" : "1",
-    "purchase_date_ms" : params.now,
-    "expires_date" : params.expDate,
-    "expires_date_pst" : params.expDatePST,
-    "is_in_intro_offer_period" : "false",
-    "transaction_id" : params.sampleTransactionID2,
-    "is_trial_period" : "false",
-    "original_transaction_id" : params.sampleTransactionID2,
-    "purchase_date" : params.nowDate,
-    "product_id" : params.sampleProductID, // productID
-    "original_purchase_date_pst" : params.nowDatePST,
-    "in_app_ownership_type" : "PURCHASED",
-    "original_purchase_date_ms" : params.now,
+    "quantity": "1",
+    "purchase_date_ms": "1694250549000",
+    "expires_date": "2099-09-09 13:37:37 Etc/GMT",
+    "expires_date_pst": "2099-09-09 06:06:06 America/Los_Angeles",
+    "is_in_intro_offer_period": "false",
+    "transaction_id": "440001731320417",
+    "is_trial_period": "false",
+    "original_transaction_id": "440001731320417",
+    "purchase_date": "2024-02-11 09:09:09 Etc/GMT",
+    "product_id": "com.floatcamellia.hfrslowmotion.yearly",
+    "original_purchase_date_pst": "2024-02-11 02:09:10 America/Los_Angeles",
+    "in_app_ownership_type": "PURCHASED",
+    "original_purchase_date_ms": "1694250550000",
     "web_order_line_item_id": "490000123456789",
-    "expires_date_ms" : params.exp,
-    "purchase_date_pst" : params.nowDatePST,
-    "original_purchase_date" : params.nowDate,
-    
+    "expires_date_ms": "4092599349000",
+    "purchase_date_pst": "2024-02-11 02:09:09 America/Los_Angeles",
+    "original_purchase_date": "2024-02-11 09:09:10 Etc/GMT"
 }
 
 let receiptRenewal = {
-    "product_id" : params.sampleProductID, // productID
-    "original_transaction_id" : "490001314520000",
-    "auto_renew_product_id" : params.sampleProductID, // productID
-    "auto_renew_status" : "1"
+    "product_id": "com.floatcamellia.hfrslowmotion.yearly",
+    "original_transaction_id": "490001314520000",
+    "auto_renew_product_id": "com.floatcamellia.hfrslowmotion.yearly",
+    "auto_renew_status": "1"
 }
 
 let receipt = {
-    "receipt_type" : "Production",
-    "app_item_id" : params.sampleItemID,
-    "receipt_creation_date" : params.nowDate,
-    "bundle_id" : params.sampleBundleID, // bundleID
-    "original_purchase_date" : params.nowDate,
-    "in_app" : [receiptInfo],
-    "adam_id" : params.sampleItemID,
-    "receipt_creation_date_pst" : params.nowDatePST,
-    "request_date" : params.nowDate,
-    "request_date_pst" : params.nowDatePST,
-    "version_external_identifier" : 863314980,
-    "request_date_ms" : params.now,
-    "original_purchase_date_pst" : params.nowDatePST,
-    "application_version" : "275",
-    "original_purchase_date_ms" : params.now,
-    "receipt_creation_date_ms" : params.now,
-    "original_application_version" : "275",
-    "download_id" : params.sampleDownloadID
+    "receipt_type": "Production",
+    "app_item_id": 1247478067,
+    "receipt_creation_date": "2024-02-11 16:06:26 Etc/GMT",
+    "bundle_id": "com.floatcamellia.hfrslowmotion",
+    "original_purchase_date": "2024-02-11 16:00:00 Etc/GMT",
+    "in_app": [
+        {
+            "quantity": "1",
+            "purchase_date_ms": "1694250549000",
+            "expires_date": "2025-09-09 13:37:37 Etc/GMT",
+            "expires_date_pst": "2025-09-09 06:06:06 America/Los_Angeles",
+            "is_in_intro_offer_period": "false",
+            "transaction_id": "490001314520000",
+            "is_trial_period": "false",
+            "original_transaction_id": "490001314520000",
+            "purchase_date": "2024-02-11 09:09:09 Etc/GMT",
+            "product_id": "com.floatcamellia.hfrslowmotion.yearly",
+            "original_purchase_date_pst": "2024-02-11 02:09:10 America/Los_Angeles",
+            "in_app_ownership_type": "PURCHASED",
+            "original_purchase_date_ms": "1694250550000",
+            "web_order_line_item_id": "490000123456789",
+            "expires_date_ms": "4092599349000",
+            "purchase_date_pst": "2024-02-11 02:09:09 America/Los_Angeles",
+            "original_purchase_date": "2024-02-11 09:09:10 Etc/GMT"
+        }
+    ],
+    "adam_id": 1247478067,
+    "receipt_creation_date_pst": "2024-02-11 06:06:26 America/Los_Angeles",
+    "request_date": "2024-02-11 16:06:27 Etc/GMT",
+    "request_date_pst": "2024-02-11 06:06:27 America/Los_Angeles",
+    "version_external_identifier": 863314980,
+    "request_date_ms": "1694273635000",
+    "original_purchase_date_pst": "2024-02-11 06:00:00 America/Los_Angeles",
+    "application_version": "275",
+    "original_purchase_date_ms": "1694273430000",
+    "receipt_creation_date_ms": "1694273634000",
+    "original_application_version": "275",
+    "download_id": 503226333846907953
 }
 
 let receiptResponse = {
     "status" : 0,
-    "environment" : "Production",
     "receipt" : receipt,
     "latest_receipt_info" : [receiptInfo],
     "latest_receipt" : "ijm", //JSON.stringify(btoa(receipt)),
+    "environment" : "Production",
     "pending_renewal_info" : [receiptRenewal]
 }
 
