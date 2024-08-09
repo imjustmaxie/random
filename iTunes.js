@@ -25,6 +25,7 @@ let params = {
     sampleBundleID : "com.floatcamellia.hfrslowmotion",
     sampleProductID : "com.floatcamellia.hfrslowmotion_yearly",
     sampleTransactionID : "440001731320417",
+    sampleTransactionID2 : "490001314520000",
     sampleItemID : 1247478067,
 }
 
@@ -48,14 +49,14 @@ const appDetails = {
     'DMV': { bundleId: 'com.dmvpermit.testapp', productId: '32111' },
     'OutPlayer': { bundleId: 'com.stps.outplayer.advanced', productId: 'com.stps.outplayer' },
     'One%20Sec': { bundleId: 'wtf.riedel.one-sec', productId: 'wtf.riedel.one_sec.pro.annual.individual' },
-    "Cocoa": { bundleId : "com.tranzmate.tranzmate1" , productId : "com.moovit.iap.moovit_plus_12M_PT3" },
+    'Cocoa' : { bundleId : 'com.tranzmate.tranzmate1' , productId : 'com.moovit.iap.moovit_plus_12M_PT3' },
 }
 
 let receiptInfo = {
     "quantity" : "1",
     "product_id" : params.sampleProductID, // productID
-    "transaction_id" : params.sampleTransactionID,
-    "original_transaction_id" : params.sampleTransactionID,
+    "transaction_id" : params.sampleTransactionID2,
+    "original_transaction_id" : params.sampleTransactionID2,
     "purchase_date" : params.nowDate,
     "purchase_date_ms" : params.now,
     "purchase_date_pst" : params.nowDatePST,
@@ -96,7 +97,7 @@ let receipt = {
     "original_purchase_date_ms" : params.now,
     "original_purchase_date_pst" : params.nowDatePST,
     "original_application_version" : receipt.application_version,
-    "in_app" : receiptInfo
+    "in_app" : [receiptInfo]
 }
 
 for (const appName in appDetails) {
@@ -113,7 +114,7 @@ let receiptResponse = {
     "status" : 0,
     "environment" : "Production",
     "receipt" : receipt,
-    "latest_receipt_info" : receipt.in_app,
+    "latest_receipt_info" : [receipt.in_app],
     "latest_receipt" : JSON.stringify(btoa(receipt)),
     "pending_renewal_info" : [receiptRenewal]
 }
