@@ -112,7 +112,7 @@ let receiptResponse = {
 }
 
 for (const appName in appDetails) {
-    if (new RegExp(`^${appName}`, 'i').test(userAgent)) {
+    if (new RegExp(`^${appName}`, 'i').test(UA)) {
         receipt.bundle_id = appDetails[appName].bundleId;
         receiptInfo.product_id = appDetails[appName].productId;
         receiptRenewal.product_id = appDetails[appName].productId;
