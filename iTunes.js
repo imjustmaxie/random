@@ -1,3 +1,11 @@
+
+/*
+
+Hostname = buy.itunes.apple.com
+Matching URL = https:\/\/buy\.itunes\.apple\.com\/verifyReceipt(.+)
+
+*/
+
 const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
 
 const appDetails = {
