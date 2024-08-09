@@ -106,7 +106,7 @@ let receiptResponse = {
     "status" : 0,
     "environment" : "Production",
     "receipt" : receipt,
-    "latest_receipt_info" : receiptInfo,
+    "latest_receipt_info" : [receiptInfo],
     "latest_receipt" : "ijm", //JSON.stringify(btoa(receipt)),
     "pending_renewal_info" : [receiptRenewal]
 }
