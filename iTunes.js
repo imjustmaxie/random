@@ -9,7 +9,7 @@ Matching URL = https:\/\/buy\.itunes\.apple\.com\/verifyReceipt(.+)
 // THIS IS A REWORKED SCRIPT BASED ON PAISSEON'S SATELLA RECEIPT GENERATION AND MODIFICATION
 // BY YOURS TRULY
 
-/*
+
 const UA = $request.headers["User-Agent"] || $request.headers["user-agent"] ;
 
 let receiptIDGen = Math.floor(Math.random() * 0x07151129)
@@ -23,7 +23,9 @@ let params = {
     expDate : "2099-09-09 13:37:37 Etc/GMT",
     expDatePST : "2099-09-09 06:06:06 America/Los_Angeles",
     sampleBundleID : "com.floatcamellia.hfrslowmotion",
-    sampleProductID : "com.floatcamellia.hfrslowmotion_yearly"
+    sampleProductID : "com.floatcamellia.hfrslowmotion_yearly",
+    sampleTransactionID : "440001731320417",
+    sampleItemID : 1247478067,
 }
 
 const appDetails = {
@@ -52,8 +54,8 @@ const appDetails = {
 let receiptInfo = {
     "quantity" : "1",
     "product_id" : params.sampleProductID, // productID
-    "transaction_id" : params.receiptID,
-    "original_transaction_id" : params.receiptID,
+    "transaction_id" : params.sampleTransactionID,
+    "original_transaction_id" : params.sampleTransactionID,
     "purchase_date" : params.nowDate,
     "purchase_date_ms" : params.now,
     "purchase_date_pst" : params.nowDatePST,
@@ -71,15 +73,15 @@ let receiptInfo = {
 
 let receiptRenewal = {
     "product_id" : params.sampleProductID, // productID
-    "original_transaction_id" : receiptIDGen,
+    "original_transaction_id" : "490001314520000",
     "auto_renew_product_id" : params.sampleProductID, // productID
     "auto_renew_status" : "1"
 }
 
 let receipt = {
     "receipt_type" : "Production",
-    "adam_id" : params.receiptID,
-    "app_item_id" : params.receiptID,
+    "adam_id" : params.sampleItemID,
+    "app_item_id" : params.sampleItemID,
     "bundle_id" : params.sampleBundleID, // bundleID
     "application_version" : "300",
     "download_id" : params.receiptID,
@@ -118,13 +120,13 @@ let receiptResponse = {
 
 $done({body : JSON.stringify(receiptResponse)})
 
-*/
+
 
 // CODE ENDS.
 
 /// THIS IS THE COPIED CODE FROM APPTESTER'S STUFF, IT'S TOO HARDCODED ON MANY PARTS.
 
-///*
+/*
 const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
 
 const appDetails = {
@@ -241,4 +243,4 @@ const responseBody = JSON.stringify(response);
 $done({ body: responseBody });
 
 
-//*/
+*/
