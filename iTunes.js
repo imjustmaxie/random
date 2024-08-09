@@ -115,7 +115,7 @@ let receiptResponse = {
     "environment" : "Production",
     "receipt" : receipt,
     "latest_receipt_info" : [receipt.in_app],
-    "latest_receipt" : "ijm" // JSON.stringify(btoa(receipt)),
+    "latest_receipt" : "ijm", // JSON.stringify(btoa(receipt)),
     "pending_renewal_info" : [receiptRenewal]
 }
 
