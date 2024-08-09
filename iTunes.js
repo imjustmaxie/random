@@ -14,9 +14,13 @@ const UA = $request.headers["User-Agent"] || $request.headers["user-agent"] ;
 let receiptIDGen = Math.floor(Math.random() * 0x07151129)
 
 let params = {
-    now = Date.now() * 1000,
-    nowDate = 0,
-    receiptID = receiptIDGen
+    now : "1694273635000",
+    nowDate : "2024-02-11 16:06:27 Etc/GMT",
+    nowDatePST: "2024-02-11 06:06:27 America/Los_Angeles",
+    receiptID : receiptIDGen,
+    exp : "4092599349000",
+    expDate : "2099-09-09 13:37:37 Etc/GMT",
+    expDatePST : "2099-09-09 06:06:06 America/Los_Angeles"
 }
 
 const appDetails = {
@@ -49,13 +53,13 @@ let receiptInfo = {
     "original_transaction_id" : params.receiptID,
     "purchase_date" : params.nowDate,
     "purchase_date_ms" : params.now,
-    "purchase_date_pst" : params.nowDate,
+    "purchase_date_pst" : params.nowDatePST,
     "original_purchase_date" : params.nowDate,
     "original_purchase_date_ms" : params.now,
-    "original_purchase_date_pst" : params.nowDate,
-    "expires_date" : params.nowDate,
-    "expires_date_ms" : params.now,
-    "expires_date_pst" : params.nowDate,
+    "original_purchase_date_pst" : params.nowDatePST,
+    "expires_date" : params.expDate,
+    "expires_date_pst" : params.expDatePST,
+    "expires_date_ms" : params.exp,
     "is_trial_period" : "false",
     "is_in_intro_offer_period" : "false",
     "in_app_ownership_type" : "PURCHASED",
@@ -79,13 +83,13 @@ let receipt = {
     "version_external_identifier" : 0,
     "receipt_creation_date" : params.nowDate,
     "receipt_creation_date_ms" : params.now,
-    "receipt_creation_date_pst" : params.nowDate,
+    "receipt_creation_date_pst" : params.nowDatePST,
     "request_date" : params.nowDate,
     "request_date_ms" : params.now,
-    "request_date_pst" : params.nowDate,
+    "request_date_pst" : params.nowDatePST,
     "original_purchase_date" : params.nowDate,
     "original_purchase_date_ms" : params.now,
-    "original_purchase_date_pst" : params.nowDate,
+    "original_purchase_date_pst" : params.nowDatePST,
     "original_application_version" : receipt.application_version,
     "in_app" : receiptInfo
 }
