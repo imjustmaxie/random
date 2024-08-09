@@ -63,7 +63,7 @@ let receiptInfo = {
 }
 
 let receiptRenewal = {
-    "product_id" : params.productId,
+    "product_id" : "", // productID
     "original_transaction_id" : receiptIDGen,
     "auto_renew_product_id" : "", // productID
     "auto_renew_status" : "1"
@@ -93,10 +93,9 @@ let receipt = {
 for (const appName in appDetails) {
     if (new RegExp(`^${appName}`, 'i').test(userAgent)) {
         receipt.bundle_id = appDetails[appName].bundleId;
-        receipt.in_app[0].product_id = appDetails[appName].productId;
-        latest_receipt_info[0].product_id = appDetails[appName].productId;
-        pending_renewal_info[0].product_id = appDetails[appName].productId;
-        pending_renewal_info[0].auto_renew_product_id = appDetails[appName].productId;
+        receiptInfo.product_id = appDetails[appName].productId;
+        receiptRenewal.product_id = appDetails[appName].productId;
+        receiptRenewal.auto_renew_product_id = appDetails[appName].productId;
         break;
     }
 }
