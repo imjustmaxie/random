@@ -20,7 +20,9 @@ let params = {
     receiptID : receiptIDGen,
     exp : "4092599349000",
     expDate : "2099-09-09 13:37:37 Etc/GMT",
-    expDatePST : "2099-09-09 06:06:06 America/Los_Angeles"
+    expDatePST : "2099-09-09 06:06:06 America/Los_Angeles",
+    sampleBundleID : "com.floatcamellia.hfrslowmotion",
+    sampleProductID : "com.floatcamellia.hfrslowmotion_yearly"
 }
 
 const appDetails = {
@@ -48,7 +50,7 @@ const appDetails = {
 
 let receiptInfo = {
     "quantity" : "1",
-    "product_id" : "com.floatcamellia.hfrslowmotion_yearly", // productID
+    "product_id" : params.sampleProductID, // productID
     "transaction_id" : params.receiptID,
     "original_transaction_id" : params.receiptID,
     "purchase_date" : params.nowDate,
@@ -67,9 +69,9 @@ let receiptInfo = {
 }
 
 let receiptRenewal = {
-    "product_id" : "com.floatcamellia.hfrslowmotion_yearly", // productID
+    "product_id" : params.sampleProductID, // productID
     "original_transaction_id" : receiptIDGen,
-    "auto_renew_product_id" : "com.floatcamellia.hfrslowmotion_yearly", // productID
+    "auto_renew_product_id" : params.sampleProductID, // productID
     "auto_renew_status" : "1"
 }
 
@@ -77,7 +79,7 @@ let receipt = {
     "receipt_type" : "Production",
     "adam_id" : params.receiptID,
     "app_item_id" : params.receiptID,
-    "bundle_id" : "com.floatcamellia.hfrslowmotion", // bundleID
+    "bundle_id" : params.sampleBundleID, // bundleID
     "application_version" : "300",
     "download_id" : params.receiptID,
     "version_external_identifier" : 0,
