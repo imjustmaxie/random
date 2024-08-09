@@ -14,8 +14,9 @@ if (hdr["operationName"] == "Authorizations")
   objet.data.viewer.isProPlan = true;
   objet.data.viewer.isEmployee = true;
   objet.data.viewer.hasAppleIapSubscription = true;
-
-  $done({JSON.stringify(objet)});
+  let bd = JSON.stringify(objet);
+  
+  $done({bd});
 } else {
   $done({});
 }
