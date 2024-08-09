@@ -1,5 +1,4 @@
 /*
-
 Hostname : gae*.spclient.spotify.com
 Matching URL : ^https:\/\/gae(.+)\.com\/device-capabilities\/v\d\/capabilities(.+)
 */
