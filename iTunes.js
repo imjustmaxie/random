@@ -102,6 +102,15 @@ let receipt = {
     "download_id" : params.sampleDownloadID
 }
 
+let receiptResponse = {
+    "status" : 0,
+    "environment" : "Production",
+    "receipt" : receipt,
+    "latest_receipt_info" : receiptInfo,
+    "latest_receipt" : "ijm", //JSON.stringify(btoa(receipt)),
+    "pending_renewal_info" : [receiptRenewal]
+}
+
 for (const appName in appDetails) {
     if (new RegExp(`^${appName}`, 'i').test(userAgent)) {
         receipt.bundle_id = appDetails[appName].bundleId;
@@ -112,14 +121,6 @@ for (const appName in appDetails) {
     }
 }
 
-let receiptResponse = {
-    "status" : 0,
-    "environment" : "Production",
-    "receipt" : receipt,
-    "latest_receipt_info" : receiptInfo,
-    "latest_receipt" : JSON.stringify(btoa(receipt)),
-    "pending_renewal_info" : [receiptRenewal]
-}
 
 $done({body : JSON.stringify(receiptResponse)})
 
