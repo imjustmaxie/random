@@ -23,10 +23,11 @@ let params = {
     expDate : "2099-09-09 13:37:37 Etc/GMT",
     expDatePST : "2099-09-09 06:06:06 America/Los_Angeles",
     sampleBundleID : "com.floatcamellia.hfrslowmotion",
-    sampleProductID : "com.floatcamellia.hfrslowmotion_yearly",
+    sampleProductID : "com.floatcamellia.hfrslowmotion.yearly",
     sampleTransactionID : "440001731320417",
     sampleTransactionID2 : "490001314520000",
     sampleItemID : 1247478067,
+    sampleDownloadID : 503226333846907953,
 }
 
 const appDetails = {
@@ -91,14 +92,14 @@ let receipt = {
     "receipt_creation_date_pst" : params.nowDatePST,
     "request_date" : params.nowDate,
     "request_date_pst" : params.nowDatePST,
-    "version_external_identifier" : 0,
+    "version_external_identifier" : 863314980,
     "request_date_ms" : params.now,
     "original_purchase_date_pst" : params.nowDatePST,
-    "application_version" : "300",
+    "application_version" : "275",
     "original_purchase_date_ms" : params.now,
     "receipt_creation_date_ms" : params.now,
-    "original_application_version" : receipt.application_version,
-    "download_id" : params.receiptID
+    "original_application_version" : "275",
+    "download_id" : params.sampleDownloadID
 }
 
 for (const appName in appDetails) {
