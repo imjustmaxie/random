@@ -9,6 +9,7 @@ Matching URL = https:\/\/buy\.itunes\.apple\.com\/verifyReceipt(.+)
 // THIS IS A REWORKED SCRIPT BASED ON PAISSEON'S SATELLA RECEIPT GENERATION AND MODIFICATION
 // BY YOURS TRULY
 
+/*
 const UA = $request.headers["User-Agent"] || $request.headers["user-agent"] ;
 
 let receiptIDGen = Math.floor(Math.random() * 0x07151129)
@@ -45,8 +46,8 @@ const appDetails = {
     'DMV': { bundleId: 'com.dmvpermit.testapp', productId: '32111' },
     'OutPlayer': { bundleId: 'com.stps.outplayer.advanced', productId: 'com.stps.outplayer' },
     'One%20Sec': { bundleId: 'wtf.riedel.one-sec', productId: 'wtf.riedel.one_sec.pro.annual.individual' },
-    /*Moovit test */ "Cocoa": { bundleId : "com.tranzmate.tranzmate1" , productId : "com.moovit.iap.moovit_plus_12M_PT3" },
-};
+    "Cocoa": { bundleId : "com.tranzmate.tranzmate1" , productId : "com.moovit.iap.moovit_plus_12M_PT3" },
+}
 
 let receiptInfo = {
     "quantity" : "1",
@@ -117,11 +118,13 @@ let receiptResponse = {
 
 $done({body : JSON.stringify(receiptResponse)})
 
+*/
+
 // CODE ENDS.
 
 /// THIS IS THE COPIED CODE FROM APPTESTER'S STUFF, IT'S TOO HARDCODED ON MANY PARTS.
 
-/*
+///*
 const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
 
 const appDetails = {
@@ -237,4 +240,4 @@ const responseBody = JSON.stringify(response);
 $done({ body: responseBody });
 
 
-*/
+//*/
