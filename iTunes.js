@@ -54,22 +54,23 @@ const appDetails = {
 
 let receiptInfo = {
     "quantity" : "1",
-    "product_id" : params.sampleProductID, // productID
-    "transaction_id" : params.sampleTransactionID2,
-    "original_transaction_id" : params.sampleTransactionID2,
-    "purchase_date" : params.nowDate,
     "purchase_date_ms" : params.now,
-    "purchase_date_pst" : params.nowDatePST,
-    "original_purchase_date" : params.nowDate,
-    "original_purchase_date_ms" : params.now,
-    "original_purchase_date_pst" : params.nowDatePST,
     "expires_date" : params.expDate,
     "expires_date_pst" : params.expDatePST,
-    "expires_date_ms" : params.exp,
-    "is_trial_period" : "false",
     "is_in_intro_offer_period" : "false",
+    "transaction_id" : params.sampleTransactionID2,
+    "is_trial_period" : "false",
+    "original_transaction_id" : params.sampleTransactionID2,
+    "purchase_date" : params.nowDate,
+    "product_id" : params.sampleProductID, // productID
+    "original_purchase_date_pst" : params.nowDatePST,
     "in_app_ownership_type" : "PURCHASED",
+    "original_purchase_date_ms" : params.now,
     "web_order_line_item_id": "490000123456789",
+    "expires_date_ms" : params.exp,
+    "purchase_date_pst" : params.nowDatePST,
+    "original_purchase_date" : params.nowDate,
+    
 }
 
 let receiptRenewal = {
@@ -81,23 +82,23 @@ let receiptRenewal = {
 
 let receipt = {
     "receipt_type" : "Production",
-    "adam_id" : params.sampleItemID,
     "app_item_id" : params.sampleItemID,
-    "bundle_id" : params.sampleBundleID, // bundleID
-    "application_version" : "300",
-    "download_id" : params.receiptID,
-    "version_external_identifier" : 0,
     "receipt_creation_date" : params.nowDate,
-    "receipt_creation_date_ms" : params.now,
+    "bundle_id" : params.sampleBundleID, // bundleID
+    "original_purchase_date" : params.nowDate,
+    "in_app" : [receiptInfo],
+    "adam_id" : params.sampleItemID,
     "receipt_creation_date_pst" : params.nowDatePST,
     "request_date" : params.nowDate,
-    "request_date_ms" : params.now,
     "request_date_pst" : params.nowDatePST,
-    "original_purchase_date" : params.nowDate,
-    "original_purchase_date_ms" : params.now,
+    "version_external_identifier" : 0,
+    "request_date_ms" : params.now,
     "original_purchase_date_pst" : params.nowDatePST,
+    "application_version" : "300",
+    "original_purchase_date_ms" : params.now,
+    "receipt_creation_date_ms" : params.now,
     "original_application_version" : receipt.application_version,
-    "in_app" : [receiptInfo]
+    "download_id" : params.receiptID
 }
 
 for (const appName in appDetails) {
@@ -114,8 +115,8 @@ let receiptResponse = {
     "status" : 0,
     "environment" : "Production",
     "receipt" : receipt,
-    "latest_receipt_info" : [receipt.in_app],
-    "latest_receipt" : "ijm", // JSON.stringify(btoa(receipt)),
+    "latest_receipt_info" : receiptInfo,
+    "latest_receipt" : JSON.stringify(btoa(receipt)),
     "pending_renewal_info" : [receiptRenewal]
 }
 
