@@ -3,9 +3,9 @@ Hostname : gae*.spclient.spotify.com
 Matching URL : ^https:\/\/gae(.+)\.com\/device-capabilities\/v\d\/capabilities(.+)
 */
 
-let objet = $response.body;
+let objext = $response.body;
 
-objet = JSON.parse(objet);
+objet = JSON.parse(objext);
 objet.license = "premium_hifi";
 objet.effective_license = "premium_hifi";
 objet.audio_quality = "HIFI";
